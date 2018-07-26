@@ -1,0 +1,4 @@
+.idea/
+vendor/
+*.sql
+node_modules/
