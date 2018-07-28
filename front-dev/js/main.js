@@ -740,13 +740,17 @@
 
 ////////////////
 
-fetch('/ajax')
-  .then(function (resp) {
-    return resp.text()
-  })
-  .catch(function (error) {
-    console.log('Error: ' + error);
-  })
-  .then(function (result) {
-    console.log('Success: ' + result);
-});
+fetch(`/ajax`)
+  // .then(function (resp) {
+  //   return resp.text()
+  // })
+  // .catch(function (error) {
+  //   console.log('Error: ' + error);
+  // })
+  // .then(function (result) {
+  //   console.log('Success: ' + result);
+  .then(resp => resp.text())
+  .catch(error => console.log(`Error: ${error}`))
+  .then(result => console.log(`Success: ${result}`));
+
+
