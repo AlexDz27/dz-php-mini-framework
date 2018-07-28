@@ -1,7 +1,17 @@
 # dz-php-mini-framework
-Technologies: PHP 7, JS, Gulp. MVC pattern, OOP paradigm.
+Technologies: PHP 7, JS (ES 6), Gulp. MVC pattern, OOP paradigm.
 
 Мини-фреймворк, написанный мной :)
+
+Реалиовано:
+- OOP
+- MVC pattern, singleton ([`база данных`](https://github.com/AlexDz27/dz-php-mini-framework/blob/master/app/classes/services/Db.php)), etc
+- Автолоадинг по стандарту PSR-4 с помощью Composer
+- Работа с Exceptions (наследование от них, создание своего метода)
+- Система регистрации и аутентификации с возможностью загрузки аватара
+- Работа с библиотекой Respect Validation для валидации форма (загружена с помощью Composer)
+- AJAX, работа с промисами, fetch (Javascript)
+
 
 Все файлы PHP для приложения хранятся в папке `app/`.
 
