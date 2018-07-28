@@ -13,7 +13,7 @@ class Config {
 	}
 
 	private function defineSession() {
-		session_set_cookie_params(3600,"/");
+		session_set_cookie_params(36000,"/");
 		session_start();
 	}
 
@@ -37,6 +37,7 @@ class Config {
 				ini_set('display_errors', 1);
 				error_reporting(E_ALL);
 				break;
+			default:
 			case 'prod':
 				error_reporting(0);
 				ini_set('display_errors', 0);

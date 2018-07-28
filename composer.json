@@ -1,6 +1,7 @@
 {
     "require": {
-        "fzaninotto/faker": "^1.8"
+        "fzaninotto/faker": "^1.8",
+        "respect/validation": "^1.1"
     },
     "autoload": {
         "psr-4": {

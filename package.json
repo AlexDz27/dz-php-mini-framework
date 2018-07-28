@@ -25,5 +25,9 @@
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
     "imagemin-pngquant": "^5.1.0"
+  },
+  "dependencies": {
+    "promise-polyfill": "8.0.0",
+    "whatwg-fetch": "^2.0.4"
   }
 }

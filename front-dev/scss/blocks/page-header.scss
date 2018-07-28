@@ -1,3 +1,53 @@
 @import "../vars";
 @import "../mixins";
 
+.login-wrapper {
+
+}
+
+.logo {
+  margin-right: auto;
+  font-size: 64px;
+
+  & a:hover {
+    text-decoration: none;
+  }
+}
+
+.page-info-header {
+  padding: 33px 0;
+  background-color: #f8f9fa;
+}
+
+.logo__span {
+
+}
+
+.logo__span--1 {
+  color: #ff3831;
+}
+
+.logo__span--2 {
+  color: #99ff4b;
+}
+
+.logo__span--3 {
+  color: #ff3831;
+}
+
+.register-thanks {
+  background-color: rgba(255, 112, 105, 0.64);
+}
+
+.header-ava {
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.user-ava--profile {
+  max-width: 310px;
+  max-height: 310px;
+}

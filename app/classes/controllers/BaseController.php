@@ -5,6 +5,29 @@ namespace App\controllers;
 use App\exceptions\ViewsException;
 
 class BaseController {
+	public function redirectIfLogged() {
+	  if (!empty($_SESSION['user'])) {
+	  	if (isset($_SERVER['HTTP_REFERER'])) {
+			  $this->redirect($_SERVER['HTTP_REFERER']);
+		  } else {
+	  		$this->redirect('/');
+		  }
+	  }
+	}
+
+	public function redirectIfNotLogged() {
+		if (empty($_SESSION['user'])) {
+			if (isset($_SERVER['HTTP_REFERER'])) {
+				$this->redirect($_SERVER['HTTP_REFERER']);
+			} else {
+				$this->redirect('/');
+			}
+		}
+	}
+	
+	public function getUserData() {
+	  return $_SESSION['user'];
+	}
 	
 	public function redirect($path) {
 	  header('Location: ' . $path);
@@ -17,9 +40,17 @@ class BaseController {
 	}
 
 	public function templateRender(string $fileName, array $vars = []) {
-		$this->render('layouts/header');
+		$userData = null;
+
+		if (!empty($_SESSION['user'])) {
+			$userData = $_SESSION['user'];
+		}
+
+		$vars['userData'] = $userData;
+
+		$this->render('layouts/header', compact('userData'));
 		$this->render('templates/' . $fileName, $vars);
-		$this->render('layouts/footer');
+		$this->render('layouts/footer', compact('userData'));
 	}
 	
 	public function render(string $fileName, array $vars = [], bool $doEcho = true) {
