@@ -5,7 +5,7 @@ Technologies: PHP 7, JS (ES 6), Gulp. MVC pattern, OOP paradigm.
 
 Реалиовано:
 - OOP
-- MVC pattern
+- MVC pattern, singleton ([`база данных`](https://github.com/AlexDz27/dz-php-mini-framework/blob/master/app/classes/services/Db.php)), etc
 - Автолоадинг по стандарту PSR-4 с помощью Composer
 - Работа с Exceptions (наследование от них, создание своего метода)
 - Система регистрации и аутентификации с возможностью загрузки аватара
