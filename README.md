@@ -6,6 +6,7 @@ Technologies: PHP 7, JS (ES 6), Gulp. MVC pattern, OOP paradigm.
 Реалиовано:
 - OOP
 - MVC pattern
+- Автолоадинг по стандарту PSR-4 с помощью Composer
 - Работа с Exceptions (наследование от них, создание своего метода)
 - Система регистрации и аутентификации с возможностью загрузки аватара
 - Работа с библиотекой Respect Validation для валидации форма (загружена с помощью Composer)
