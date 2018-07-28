@@ -4,7 +4,7 @@ namespace App\controllers;
 
 use App\models\UserModel;
 
-use App\services\StringHelper as sh;
+use App\helpers\StringHelper as sh;
 
 use Respect\Validation\Validator as v;
 use Respect\Validation\Exceptions\NestedValidationException;
