@@ -10,7 +10,7 @@ Technologies: PHP 7, JS (ES 6), Gulp. MVC pattern, OOP paradigm.
 - Работа с Exceptions (наследование от них, создание своего метода)
 - Система регистрации и аутентификации с возможностью загрузки аватара
 - Работа с библиотекой Respect Validation для валидации форма (загружена с помощью Composer)
-- Работа с промисами, fetch (Javascript)
+- AJAX, работа с промисами, fetch (Javascript)
 
 
 Все файлы PHP для приложения хранятся в папке `app/`.
