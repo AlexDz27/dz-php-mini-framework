@@ -2,6 +2,7 @@
 Technologies: PHP 7, JS (ES 6), Gulp. MVC pattern, OOP paradigm.
 
 Мини-фреймворк, написанный мной :)
+Что-то пытался брать из фреймворка Laravel, что-то из доступного в интернете кода, что-то писал сам с нуля.
 
 Реалиовано:
 - OOP
@@ -20,7 +21,6 @@ Technologies: PHP 7, JS (ES 6), Gulp. MVC pattern, OOP paradigm.
 в которой содержатся все файлы, с которыми может взаимодействовать юзер.
 
 Front controller - файл index.php. 
-Что-то пытался брать из фреймворка Laravel, что-то из доступного в интернете кода, что-то писал сам с нуля.
 
 Реализован autoloading по PSR-4 с помощью Композера:
 [composer.json](https://github.com/AlexDz27/dz-php-mini-framework/blob/master/composer.json)
