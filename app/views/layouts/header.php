@@ -34,6 +34,8 @@
             <?php endif; ?>
             <span>Welcome, <b><?= $userData['username']; ?></b></span>
             &nbsp;&nbsp;
+            <a href="/add">Add product</a>
+            &nbsp;&nbsp;
             <a href="/profile">My profile</a>
             &nbsp;&nbsp;
             <a href="/logout">Sign out</a>

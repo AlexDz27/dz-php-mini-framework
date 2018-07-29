@@ -5,6 +5,7 @@ namespace App\services;
 use App\controllers\BaseController;
 
 use App\controllers\PageController;
+use App\controllers\ProductController;
 use App\controllers\ProductsController;
 use App\controllers\UserController;
 
@@ -25,7 +26,9 @@ class Router {
 			'profile' => ['ctrlName' => UserController::class, 'actionName' => 'profile'],
 			'logout' => ['ctrlName' => UserController::class, 'actionName' => 'logout'],
 			'ajax' => ['ctrlName' => UserController::class, 'actionName' => 'ajax'],
-			'' => ['ctrlName' => ProductsController::class, 'actionName' => 'index']
+			'add' => ['ctrlName' => ProductController::class, 'actionName' => 'add'],
+			'prikol' => ['ctrlName' => ProductController::class, 'actionName' => 'prikol'],
+			'' => ['ctrlName' => ProductController::class, 'actionName' => 'index']
 		];
 	}
 

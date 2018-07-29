@@ -741,16 +741,20 @@
 ////////////////
 
 fetch(`/ajax`)
-  // .then(function (resp) {
-  //   return resp.text()
-  // })
-  // .catch(function (error) {
-  //   console.log('Error: ' + error);
-  // })
-  // .then(function (result) {
-  //   console.log('Success: ' + result);
   .then(resp => resp.text())
   .catch(error => console.log(`Error: ${error}`))
   .then(result => console.log(`Success: ${result}`));
 
 
+function readImage(input) {
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      console.log(e.target.result);
+      document.querySelector('#prod-add').setAttribute('src', e.target.result);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
