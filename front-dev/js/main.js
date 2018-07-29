@@ -750,9 +750,12 @@ function readImage(input) {
   if (input.files && input.files[0]) {
     const reader = new FileReader();
 
-    reader.onload = function (e) {
+    reader.onload = (e) => {
       console.log(e.target.result);
-      document.querySelector('#prod-add').setAttribute('src', e.target.result);
+      if (document.querySelector('#prod-add')) {
+        document.querySelector('#prod-add').setAttribute('src', e.target.result);
+        console.log('was #prod-add');
+      }
     };
 
     reader.readAsDataURL(input.files[0]);

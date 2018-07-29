@@ -20,14 +20,13 @@ class Router {
 	protected function getRoutes() {
 		return [
 			'contacts' => ['ctrlName' => PageController::class, 'actionName' => 'contacts'],
-			'product/[0-9]+' => ['ctrlName' => ProductsController::class, 'actionName' => 'show'],
+			'product/[0-9]+' => ['ctrlName' => ProductController::class, 'actionName' => 'show'],
 			'sign-up' => ['ctrlName' => UserController::class, 'actionName' => 'signUp'],
 			'sign-in' => ['ctrlName' => UserController::class, 'actionName' => 'signIn'],
 			'profile' => ['ctrlName' => UserController::class, 'actionName' => 'profile'],
 			'logout' => ['ctrlName' => UserController::class, 'actionName' => 'logout'],
 			'ajax' => ['ctrlName' => UserController::class, 'actionName' => 'ajax'],
 			'add' => ['ctrlName' => ProductController::class, 'actionName' => 'add'],
-			'prikol' => ['ctrlName' => ProductController::class, 'actionName' => 'prikol'],
 			'' => ['ctrlName' => ProductController::class, 'actionName' => 'index']
 		];
 	}

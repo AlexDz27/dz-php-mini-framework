@@ -5,11 +5,11 @@
       <?php if ($userData['ava_path'] === null): ?>
         <img src="public/img/no-ava.jpg" alt="">
       <?php else: ?>
-        <img class="user-ava--profile" src="<?= $userData['ava_path']; ?>" alt="">
+        <img class="user-ava--profile" id="prof-add" src="<?= $userData['ava_path']; ?>" alt="">
       <?php endif; ?>
       <form class="mt-3" method="post" enctype="multipart/form-data">
         <p>
-        <input type="file" name="ava" id="">
+        <input type="file" id="prof-add" onchange="readImage(this);" name="ava">
         </p>
         <p>
         <button name="ava" type="submit">Submit avatar</button>

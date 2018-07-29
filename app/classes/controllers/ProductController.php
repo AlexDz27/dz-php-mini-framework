@@ -5,18 +5,25 @@ namespace App\controllers;
 use App\helpers\StringHelper as sh;
 
 use App\models\ProductModel;
+use App\models\UserModel;
 use Respect\Validation\Validator as v;
 use Respect\Validation\Exceptions\NestedValidationException;
 
 class ProductController extends BaseController {
 	protected $model;
+	protected $userModel;
 
 	public function __construct() {
 		$this->model = new ProductModel();
+		$this->userModel = new UserModel();
 	}
 
 	public function index() {
 		$products = $this->model->getAllProducts();
+
+		// test user
+		$userData = $this->userModel->getSignedInUser('tst', '123');
+		$this->userModel->authenticate($userData);
 
 		$this->templateRender('products', compact(['products']));
 	}
@@ -85,5 +92,10 @@ class ProductController extends BaseController {
 		}
 
 	  $this->templateRender('add-product', compact(['errors', 'title', 'text']));
+	}
+
+	public function show() {
+	  echo 'tbd' . '<br>';
+	  echo '<a href="/">Back</a>';
 	}
 }

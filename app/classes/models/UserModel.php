@@ -30,6 +30,7 @@ class UserModel extends BaseModel {
 	  		throw new DbException('Statement execution returned false - user not created');
 		  }
 	  } catch (DbException $ex) {
+	  	$errInfo = $stmt->errorInfo();
 			$ex->getDebugInfo();
 		}
 	}
@@ -62,6 +63,12 @@ class UserModel extends BaseModel {
 	  $userData = $stmt->fetch();
 
 		return password_verify($password, $userData['password']) ? $userData : false;
+	}
+
+	public function authenticate($userData) {
+	  if ($userData) {
+		  return $_SESSION['user'] = $userData;
+	  }
 	}
 
 	public function logoutUser() {

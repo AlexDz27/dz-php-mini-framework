@@ -8,7 +8,7 @@ class ProductModel extends BaseModel {
 	public static $table = 'products';
 	
 	public function getAllProducts() {
-		$q = "SELECT p.id ,p.title, p.description, DATE_FORMAT(p.date_added, '%D %M %h:%i') AS dt_created, pi.path, u.username FROM
+		$q = "SELECT p.id ,p.title, p.description, DATE_FORMAT(p.date_added, '%D %M %H:%i') AS dt_created, pi.path, u.username FROM
  products p
 LEFT JOIN product_images pi ON pi.product_id = p.id
 INNER JOIN users u ON p.user_id = u.id ORDER BY dt_created DESC";

@@ -103,7 +103,7 @@ class UserController extends BaseController {
 				if (!($userData = $this->model->getSignedInUser($username, $password))) {
 					$errors['username'][] = 'Wrong username or password. Try again';
 				} else {
-					$_SESSION['user'] = $userData;
+					$this->model->authenticate($userData);
 
 					$this->redirect('/');
 				}
